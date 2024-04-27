@@ -33,12 +33,11 @@ struct HomeView: View {
 
     
     func dispatchNotification() {
-        print("in dispatch")
         let identifier = "reminder"
         let title = "Your reminder <3"
         let body = self.currentReminder.reminder
-        let hour = 18
-        let minute = 23
+        let hour = 15
+        let minute = 0
         let isDaily = true
         
         let notificationCenter = UNUserNotificationCenter.current()
@@ -53,8 +52,7 @@ struct HomeView: View {
         dateComponents.hour = hour
         dateComponents.minute = minute
         
-//        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: isDaily)
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 60, repeats: true)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: isDaily)
         let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
         notificationCenter.add(request)
     }

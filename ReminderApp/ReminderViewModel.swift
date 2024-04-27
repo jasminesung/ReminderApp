@@ -36,7 +36,6 @@ import FirebaseFirestore
     
     func saveData(reminder: ReminderModel) {
         if let id = reminder.id {
-            print("id", id)
             // Edit note
             if !reminder.reminder.isEmpty {
                 let docRef = db.collection("reminders").document(id)
