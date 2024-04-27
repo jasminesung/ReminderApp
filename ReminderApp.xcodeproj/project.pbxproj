@@ -11,6 +11,9 @@
 		E108DAA82BCF625C00710E61 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E108DAA72BCF625C00710E61 /* AuthenticationService.swift */; };
 		E108DAAA2BCF691600710E61 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E108DAA92BCF691500710E61 /* HomeView.swift */; };
 		E108DAAC2BCF6A2C00710E61 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E108DAAB2BCF6A2C00710E61 /* AuthView.swift */; };
+		E17331A62BDD9F520053EBE4 /* ReminderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17331A52BDD9F520053EBE4 /* ReminderModel.swift */; };
+		E17331A82BDDA0180053EBE4 /* ReminderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17331A72BDDA0180053EBE4 /* ReminderViewModel.swift */; };
+		E17331AA2BDDA2910053EBE4 /* ReminderDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17331A92BDDA2910053EBE4 /* ReminderDetail.swift */; };
 		E1DEBD202BCF584600DFE35E /* ReminderAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DEBD1F2BCF584600DFE35E /* ReminderAppApp.swift */; };
 		E1DEBD222BCF584600DFE35E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DEBD212BCF584600DFE35E /* ContentView.swift */; };
 		E1DEBD242BCF584700DFE35E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1DEBD232BCF584700DFE35E /* Assets.xcassets */; };
@@ -46,6 +49,9 @@
 		E108DAA72BCF625C00710E61 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		E108DAA92BCF691500710E61 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E108DAAB2BCF6A2C00710E61 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		E17331A52BDD9F520053EBE4 /* ReminderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderModel.swift; sourceTree = "<group>"; };
+		E17331A72BDDA0180053EBE4 /* ReminderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewModel.swift; sourceTree = "<group>"; };
+		E17331A92BDDA2910053EBE4 /* ReminderDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderDetail.swift; sourceTree = "<group>"; };
 		E1DEBD1C2BCF584600DFE35E /* ReminderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReminderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1DEBD1F2BCF584600DFE35E /* ReminderAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderAppApp.swift; sourceTree = "<group>"; };
 		E1DEBD212BCF584600DFE35E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -119,6 +125,9 @@
 				E108DAA72BCF625C00710E61 /* AuthenticationService.swift */,
 				E108DAA92BCF691500710E61 /* HomeView.swift */,
 				E108DAAB2BCF6A2C00710E61 /* AuthView.swift */,
+				E17331A52BDD9F520053EBE4 /* ReminderModel.swift */,
+				E17331A72BDDA0180053EBE4 /* ReminderViewModel.swift */,
+				E17331A92BDDA2910053EBE4 /* ReminderDetail.swift */,
 			);
 			path = ReminderApp;
 			sourceTree = "<group>";
@@ -291,7 +300,10 @@
 				E1DEBD532BCF5C8400DFE35E /* UserModel.swift in Sources */,
 				E108DAAC2BCF6A2C00710E61 /* AuthView.swift in Sources */,
 				E1DEBD202BCF584600DFE35E /* ReminderAppApp.swift in Sources */,
+				E17331A62BDD9F520053EBE4 /* ReminderModel.swift in Sources */,
+				E17331A82BDDA0180053EBE4 /* ReminderViewModel.swift in Sources */,
 				E108DAAA2BCF691600710E61 /* HomeView.swift in Sources */,
+				E17331AA2BDDA2910053EBE4 /* ReminderDetail.swift in Sources */,
 				E108DAA82BCF625C00710E61 /* AuthenticationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
