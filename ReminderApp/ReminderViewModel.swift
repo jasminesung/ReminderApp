@@ -34,6 +34,16 @@ import FirebaseFirestore
         
     }
     
+    func deleteData(id: String) async {
+        do {
+          try await db.collection("reminders").document(id).delete()
+          print("Document successfully removed!")
+          self.fetchData()
+        } catch {
+          print("Error removing document: \(error)")
+        }
+    }
+    
     func saveData(reminder: ReminderModel) {
         if let id = reminder.id {
             // Edit note
@@ -47,6 +57,7 @@ import FirebaseFirestore
                         print("Error updating document: \(err)")
                     } else {
                         print("Document successfully updated")
+                        self.fetchData()
                     }
                 }
             }
@@ -61,6 +72,7 @@ import FirebaseFirestore
                         print("Error adding document: \(err)")
                     } else {
                         print("Document added with ID: \(ref!.documentID)")
+                        self.fetchData()
                     }
                 }
             }

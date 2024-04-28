@@ -11,8 +11,8 @@ struct AuthView: View {
     @ObservedObject var authService = AuthenticationService()
     var body: some View {
         VStack {
-            LabeledContent {TextField("", text: $authService.email)} label: {Text("Email")}
-            LabeledContent{SecureField("", text: $authService.password)} label: {Text("Password")}
+            LabeledContent {TextField("", text: $authService.email)} label: {Text("📧 Email").bold()}
+            LabeledContent{SecureField("", text: $authService.password)} label: {Text("✏️ Password").bold()}
             Button{Task {await authService.logIn()}} label: {Text("Log In")}
             Button{Task {await authService.signUp()}} label: {Text("Sign Up")}
         }

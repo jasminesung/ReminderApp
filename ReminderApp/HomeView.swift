@@ -12,6 +12,17 @@ struct HomeView: View {
     @ObservedObject var reminderApp = ReminderViewModel()
     @State var reminder = ReminderModel(reminder: "")
     @State var currentReminder = ReminderModel(reminder: "")
+    var emojis = ["☀️", "🌸", "🩵", "🌈", "🍀"]
+    var colors = [Color.pink, Color.indigo, Color.teal, Color.mint]
+    
+    
+    func getRandomEmoji() -> String {
+        return emojis.randomElement()!
+    }
+    
+    func getRandomColor() -> Color {
+        return colors.randomElement()!
+    }
     
     func checkForPermission() {
         let notificationCenter = UNUserNotificationCenter.current()
@@ -30,10 +41,18 @@ struct HomeView: View {
                 return
             }}
     }
+    
+    func deleteReminder(at offsets: IndexSet) {
+        let index = offsets[offsets.startIndex]
+        let reminderId = reminderApp.reminders[index].id
+        Task {
+            await reminderApp.deleteData(id: reminderId!)
+        }
+    }
 
     
     func dispatchNotification() {
-        let title = "Your reminder <3"
+        let title = "Your reminder❤️"
         let body = self.currentReminder.reminder
         let hour = 15
         let minute = 0
@@ -70,9 +89,9 @@ struct HomeView: View {
                         $reminder in NavigationLink {
                             ReminderDetail(reminder: $reminder)
                         } label: {
-                            Text(reminder.reminder)
+                            Text(getRandomEmoji() + " " + reminder.reminder).foregroundColor(getRandomColor())
                         }
-                    }
+                    }.onDelete(perform: deleteReminder)
                     Section {
                         NavigationLink {
                             ReminderDetail(reminder: $reminder)
