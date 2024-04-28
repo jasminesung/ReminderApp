@@ -53,6 +53,7 @@ struct HomeView: View {
         
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: isDaily)
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        notificationCenter.removeAllPendingNotificationRequests()
         notificationCenter.add(request)
     }
     
