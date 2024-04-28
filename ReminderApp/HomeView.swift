@@ -33,7 +33,6 @@ struct HomeView: View {
 
     
     func dispatchNotification() {
-        let identifier = "reminder"
         let title = "Your reminder <3"
         let body = self.currentReminder.reminder
         let hour = 15
@@ -53,7 +52,7 @@ struct HomeView: View {
         dateComponents.minute = minute
         
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: isDaily)
-        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+        let request = UNNotificationRequest(identifier: UUID(), content: content, trigger: trigger)
         notificationCenter.add(request)
     }
     
